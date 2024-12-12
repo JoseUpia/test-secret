@@ -1,3 +1,8 @@
 <h1>Hola Mundo</h1>
 
 <pre>{{environment | json }}</pre>
+
+
+<div *ngIf="environment.production">
+    <h2>Estamos en producción</h2>
+</div>

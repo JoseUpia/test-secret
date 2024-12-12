@@ -1,8 +1,8 @@
 export const environment = {
-    production: false,
-    name: 'production',
+    production: import.meta.env.NG_APP_ENV_PRODUCTION === 'true',
+    name: import.meta.env.NG_APP_ENV_NAME || 'production',
     firebase: {
-        project: 'test-secret',
-        apiKey: 'ABC-123456-XYZ',
+        project: import.meta.env.NG_APP_ENV_PROJECT || 'test-secret',
+        apiKey: import.meta.env.NG_APP_ENV_API_KEY || 'ABC-123456-XYZ',
     }
 };
